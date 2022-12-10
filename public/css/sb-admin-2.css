@@ -2527,29 +2527,29 @@ fieldset:disabled a.btn {
 
 .btn-black {
 	color: #fff;
-	background-color: #4e73df;
-	border-color: #4e73df
+	background-color: #272f3b;
+	border-color: #fff
 }
 
 .btn-black:hover {
 	color: #fff;
-	background-color: #2e59d9;
-	border-color: #2653d4
+	background-color: #272f3b;
+	border-color: #fff
 }
 
 .btn-black.focus,
 .btn-black:focus {
 	color: #fff;
-	background-color: #2e59d9;
-	border-color: #2653d4;
+	background-color: #272f3b;
+	border-color: #fff;
 	box-shadow: 0 0 0 .2rem rgba(105, 136, 228, .5)
 }
 
 .btn-black.disabled,
 .btn-black:disabled {
 	color: #fff;
-	background-color: #4e73df;
-	border-color: #4e73df
+	background-color: #272f3b;
+	border-color: #fff
 }
 
 .btn-black:not(:disabled):not(.disabled).active,

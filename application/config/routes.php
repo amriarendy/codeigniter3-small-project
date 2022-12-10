@@ -59,3 +59,6 @@ $route['email-verify'] = 'Auth/emailVerify';
 $route['reset-password'] = 'Auth/resetPassword';
 
 $route['dashboard'] = 'Dashboard/index';
+$route['page/blank'] = 'Page/blank';
+$route['page/form'] = 'Page/form';
+$route['page/table'] = 'Page/table';

@@ -65,7 +65,7 @@
                     <div class="collapse-divider"></div>
                     <h6 class="collapse-header">Master Aplikasi:</h6>
                     <a class="collapse-item" href="404.html">Kategori</a>
-                    <a class="collapse-item" href="blank.html">Blank Page</a>
+                    <a class="collapse-item" href="<?= site_url('page/blank'); ?>">Blank Page</a>
                 </div>
             </div>
         </li>

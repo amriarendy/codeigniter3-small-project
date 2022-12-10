@@ -28,19 +28,37 @@ class Auth extends CI_Controller
 			'title' => "Registratsi",
 			'description' => "This master apps for codeigniter",
 		];
-		$validation->set_rules([
-			'fullName', 'Full Name', 'required', [
+		$validation->set_rules(
+			'fullName',
+			'Full Name',
+			'required',
+			[
 				'required' => 'This value is required'
 			]
-		]);
-		$validation->set_rules([
-			'email', 'email', 'required', [
+		);
+		$validation->set_rules(
+			'email',
+			'email',
+			'required',
+			[
 				'required' => 'This value is required'
 			]
-		]);
-		if ($validation->run()) {
+		);
+		$validation->set_rules(
+			'password',
+			'password',
+			'required',
+			[
+				'required' => 'This value is required'
+			]
+		);
+		if ($validation->run() != false) {
 			$model->registration();
-			$flashData->set_flashdata('msg', '<div class="alert alert-success">Success Registration</div>');
+			$flashData->set_flashdata([
+				'status' => true,
+				'msg' => 'Registration Success!',
+			]);
+			redirect('login');
 		} else {
 			$this->load->view('auth/register', $data);
 		}

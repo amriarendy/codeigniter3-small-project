@@ -15,7 +15,7 @@
     <link href="<?= base_url() ?>/public/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-black">
 
     <div class="container">
 
@@ -34,16 +34,17 @@
                             <form class="user" action="<?= site_url('register') ?>" method="post">
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="fullName" placeholder="Full Name">
-                                    <?= form_error('fullName', '<div class="text-danger"></div>') ?>
+                                    <?= form_error('fullName', '<span class="text-danger"></span>') ?>
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control" name="email" placeholder="Email">
-                                    <?= form_error('email', '<div class="text-danger"></div>') ?>
+                                    <?= form_error('email', '<span class="text-danger"></span>') ?>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password">
+                                    <input type="password" class="form-control" name="password" placeholder="Password">
+                                    <?= form_error('password', '<span class="text-danger"></span>') ?>
                                 </div>
-                                <button type="submit" class="btn btn-success btn-block">
+                                <button type="submit" class="btn btn-primary btn-block">
                                     Registration
                                 </button>
                             </form>
@@ -67,15 +68,6 @@
     <script src="<?= base_url() ?>/public/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="<?= base_url() ?>/public/js/sb-admin-2.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script>
-        swal({
-            title: "Success",
-            text: "lorem ipsum dolor sit amet",
-            icon: "success",
-            button: "Ok",
-        })
-    </script>
 </body>
 
 </html>
