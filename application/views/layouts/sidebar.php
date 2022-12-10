@@ -1,12 +1,12 @@
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-black sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
+            <div class="sidebar-brand-icon">
+                <i class="fab fa-github"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+            <div class="sidebar-brand-text mx-3">Github</div>
         </a>
 
         <!-- Divider -->
@@ -34,7 +34,7 @@
                 <span>Data Pengguna</span>
             </a>
             <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
+                <div class="bg-black py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Utilities:</h6>
                     <a class="collapse-item" href="utilities-color.html">Data Administrator</a>
                     <a class="collapse-item" href="utilities-border.html">Data Pengguna</a>
@@ -57,7 +57,7 @@
                 <span>Master Data</span>
             </a>
             <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
+                <div class="bg-black py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Master Alamat:</h6>
                     <a class="collapse-item" href="login.html">Provinsi</a>
                     <a class="collapse-item" href="register.html">Kabupaten</a>
