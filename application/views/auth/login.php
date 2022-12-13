@@ -5,10 +5,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="description" content="This start programs">
+	<meta name="author" content="amriarendy">
 	<title><?= $title ?></title>
-	<!-- Custom fonts for this template-->
+	<link rel="icon" type="image/x-icon" href="<?= base_url() ?>/public/uploads/favicon.ico">
 	<link href="<?= base_url() ?>/public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	<!-- Custom styles for this template-->
@@ -30,17 +30,19 @@
 						<div class="p-5">
 							<div class="text-center">
 								<h1 class="h4 text-gray-900 mb-4">Login</h1>
-								<div class="flashdata" data-flashdata="<?= $this->session->flashdata('msg') ?>"></div>
-								<?php if ($this->session->flashdata('msg')) : ?>
+								<div class="flashdata" data-flashdata-true="<?= $this->session->flashdata('status') ?>" data-flashdata-msg="<?= $this->session->flashdata('msg') ?>"></div>
+								<?php if ($this->session->flashdata('status') == "success") { ?>
 									<div class="alert alert-success"><?= $this->session->flashdata('msg') ?></div>
-								<?php endif; ?>
+								<?php } else { ?>
+									<div class="alert alert-danger"><?= $this->session->flashdata('msg') ?></div>
+								<?php } ?>
 							</div>
-							<form class="user">
+							<form class="user" action="<?= site_url('login') ?>" method="post">
 								<div class="form-group">
-									<input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email">
+									<input type="email" class="form-control" id="exampleInputEmail" name="email" value="admin@admin.com" placeholder="Email">
 								</div>
 								<div class="form-group">
-									<input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+									<input type="password" class="form-control" id="exampleInputPassword" name="password" value="admin@admin.com" placeholder="Password">
 								</div>
 								<div class="form-group">
 									<div class="custom-control custom-checkbox small">
@@ -49,9 +51,9 @@
 											Me</label>
 									</div>
 								</div>
-								<a href="<?= site_url('dashboard') ?>" class="btn btn-primary btn-block">
+								<button type="submit" class="btn btn-primary btn-block">
 									Login
-								</a>
+								</button>
 								<hr>
 								<a href="index.html" class="btn btn-google btn-block">
 									<i class="fab fa-google fa-fw"></i> Login with Google

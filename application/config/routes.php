@@ -53,12 +53,21 @@ $route['default_controller'] = 'auth';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['login'] = 'Auth/index';
+$route['login'] = 'Auth/login';
+$route['logout'] = 'Dashboard/logOut';
 $route['register'] = 'Auth/register';
 $route['email-verify'] = 'Auth/emailVerify';
 $route['reset-password'] = 'Auth/resetPassword';
 
 $route['dashboard'] = 'Dashboard/index';
+
+$route['users'] = 'Users/index';
+
+$route['master/provinces'] = 'Master/provinces';
+$route['master/districts'] = 'Master/districts';
+$route['master/regencies'] = 'Master/regencies';
+$route['master/vilages'] = 'Master/vilages';
+
 $route['page/blank'] = 'Page/blank';
 $route['page/form'] = 'Page/form';
 $route['page/table'] = 'Page/table';

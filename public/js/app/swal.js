@@ -1,9 +1,10 @@
-const flashMassage = $('.flashdata').data('flashdata');
+const flashStatus = $('.flashdata').data('flashdata-true');
+const flashMassage = $('.flashdata').data('flashdata-msg');
 if (flashMassage) {
     swal({
-        title: "Success!",
+        title: flashStatus,
         text: flashMassage,
-        icon: "success",
+        icon: flashStatus,
         button: "Ok!",
     })
 }
