@@ -13,10 +13,13 @@ class UsersModel extends CI_Model
         # code...
     }
 
-
     public function getAll()
     {
-        # code...
+        $this->db->select('email,full_name,access,phone_number,date_of_birth,gender,provinces_id,districts_id,regencies_id,villages_id,street,building,home_number,address');
+        $this->db->join('users_identity', 'users_identity_id=users.id', 'left');
+        $this->db->join('address', 'address.users_address_id=users.id', 'left');
+        $result = $this->db->get('users');
+        return $result;
     }
 
     public function getWhereById()
@@ -34,8 +37,8 @@ class UsersModel extends CI_Model
         $this->db->select('email,full_name,access,phone_number,date_of_birth,gender,provinces_id,districts_id,regencies_id,villages_id,street,building,home_number,address');
         $this->db->join('users_identity', 'users_identity_id=users.id', 'left');
         $this->db->join('address', 'address.users_address_id=users.id', 'left');
-        $session = $this->db->get_where('users', ['id' => $this->session->userdata('id')]);
-        return $session;
+        $result = $this->db->get_where('users', ['id' => $this->session->userdata('id')]);
+        return $result;
     }
 
     public function storeUsers()

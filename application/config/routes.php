@@ -62,6 +62,7 @@ $route['reset-password'] = 'Auth/resetPassword';
 $route['dashboard'] = 'Dashboard/index';
 
 $route['users'] = 'Users/index';
+$route['users-add'] = 'Users/add';
 
 $route['master/provinces'] = 'Master/provinces';
 $route['master/districts'] = 'Master/districts';
