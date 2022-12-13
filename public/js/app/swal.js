@@ -4,6 +4,6 @@ if (flashMassage) {
         title: "Success!",
         text: flashMassage,
         icon: "success",
-        button: "Aww yiss!",
+        button: "Ok!",
     })
 }

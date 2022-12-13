@@ -39,9 +39,11 @@ class Auth extends CI_Controller
 		$validation->set_rules(
 			'email',
 			'email',
-			'required',
+			'required|trim|valid_email|is_unique[users.email]',
 			[
-				'required' => 'This value is required'
+				'required' => 'This value is required',
+				'valid_email' => 'Email not',
+				'is_unique' => 'Email has been used'
 			]
 		);
 		$validation->set_rules(

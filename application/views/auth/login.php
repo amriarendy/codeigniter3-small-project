@@ -31,7 +31,9 @@
 							<div class="text-center">
 								<h1 class="h4 text-gray-900 mb-4">Login</h1>
 								<div class="flashdata" data-flashdata="<?= $this->session->flashdata('msg') ?>"></div>
-								<?= $this->session->flashdata('msg') ?>
+								<?php if ($this->session->flashdata('msg')) : ?>
+									<div class="alert alert-success"><?= $this->session->flashdata('msg') ?></div>
+								<?php endif; ?>
 							</div>
 							<form class="user">
 								<div class="form-group">
