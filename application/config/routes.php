@@ -61,13 +61,13 @@ $route['reset-password'] = 'Auth/resetPassword';
 
 $route['dashboard'] = 'Dashboard/index';
 
-$route['users'] = 'Users/index';
-$route['users-add'] = 'Users/add';
+$route['data/users'] = 'Users/index';
+$route['data/users-add'] = 'Users/add';
 
 $route['master/provinces'] = 'Master/provinces';
 $route['master/districts'] = 'Master/districts';
 $route['master/regencies'] = 'Master/regencies';
-$route['master/vilages'] = 'Master/vilages';
+$route['master/village'] = 'Master/villages';
 
 $route['page/blank'] = 'Page/blank';
 $route['page/form'] = 'Page/form';

@@ -58,10 +58,19 @@
                                                 <label for="email">Password <span style="color: red;">*</span></label>
                                                 <input type="password" class="form-control" id="email" placeholder="Password">
                                             </div>
+
+                                            <div class="form-group">
+                                                <label for="email">Role <span style="color: red;">*</span></label>
+                                                <select class="form-control" name="" id="">
+                                                    <option value="admin" selected>Administrator</option>
+                                                    <option value="users">Users</option>
+                                                </select>
+                                            </div>
+
                                             <hr>
                                             <div class="form-group">
                                                 <label for="email">No. Handphone</label>
-                                                <input type="number" class="form-control" id="exampleInputEmail" placeholder="Email">
+                                                <input type="number" class="form-control" id="exampleInputEmail" placeholder="No. Handphone">
                                             </div>
                                             <div class="form-group">
                                                 <label for="email">Tanggal Lahir</label>
